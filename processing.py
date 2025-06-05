@@ -323,6 +323,7 @@ class WaveformImage:
 
         if 0.0 < alpha < 1.0 and y_min_int - 1 >= 0:
             if not self.transparent_background:
+                current_pix = self.pix[x, y_max_int + 1]
                 r = int((1 - alpha) * current_pix[0] + alpha * color[0])
                 g = int((1 - alpha) * current_pix[1] + alpha * color[1])
                 b = int((1 - alpha) * current_pix[2] + alpha * color[2])
